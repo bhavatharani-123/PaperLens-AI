@@ -23,11 +23,13 @@ Place PDFs in `llm/data/` (or `llm/papers/` or `llm/pdfs/`). The app indexes PDF
 
 ## Optional Gemini demo
 
-The separate `llm/test_rag.py` demo uses Gemini. Set `GEMINI_API_KEY` in an environment variable or in `llm/.env` before running it:
+The separate `llm/test_rag.py` demo uses Gemini and reads PDFs from `llm/papers/`. Place authorized PDFs there, set `GEMINI_API_KEY` in an environment variable or in `llm/.env`, and run:
 
 ```powershell
 $env:GEMINI_API_KEY = "your-api-key"
-python llm\test_rag.py
+Push-Location llm
+python test_rag.py
+Pop-Location
 ```
 
 Do not commit `.env` files or API keys.
