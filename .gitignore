@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Local research inputs; add only papers you have permission to share
+llm/data/*.pdf
+llm/papers/*.pdf
+llm/pdfs/*.pdf
+
+# Presentation files are not required to run the app
+PPT/*.pptx
